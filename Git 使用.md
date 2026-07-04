@@ -1,18 +1,5 @@
 # Git 与 Agent 协作入门讲稿
 
-## 课程定位
-
-这一节不是完整的 Git 课程，而是为后面的 Agent 实践服务。
-
-学生需要理解：
-
-1. Git 是代码版本记录器；
-2. 远程仓库是团队共享代码的位置；
-3. Agent 会自动修改代码，所以必须用 Git 来审查、提交、回滚和同步；
-4. 标准流程应该是：**先看状态，再看 diff，再提交，最后 push**。
-
-------
-
 # 一、Git 是什么：代码版本记录器
 
 ### 讲述
@@ -248,6 +235,8 @@ origin = 我这个本地项目对应的云端仓库
 以后我们执行：
 
 ```bash
+git add .
+git commit -m "init_repo"
 git push origin main
 ```
 
@@ -378,8 +367,6 @@ git push origin main
 
 # 四、Agent 为什么需要 Git
 
-## 时间：20:00 - 23:00
-
 ### 讲述
 
 现在我们已经知道怎么把本地项目推送到远程仓库。接下来回到这门课的主题：Agent。
@@ -421,8 +408,6 @@ Agent 改代码之后，Git 可以帮我们回答五个问题：
 ------
 
 # 五、Agent 辅助 Git 的三个 Prompt
-
-## 时间：23:00 - 27:00
 
 接下来我们讲三个最常用的 Prompt。
 
@@ -522,8 +507,6 @@ feat: add calculator divide operation
 ------
 
 # 六、Demo：修 bug + 提交 + push
-
-## 时间：27:00 - 30:00
 
 最后我们做一个完整 Demo。
 
@@ -683,8 +666,6 @@ agent/fix-divide-zero → main
 ------
 
 # 七、全节总结
-
-## 时间：最后 30 秒
 
 今天我们讲了 Git 和 Agent 协作的最小流程。
 
