@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>李明 · 个人主页</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      var stored = localStorage.getItem("theme");
+      var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      var theme = stored === "light" || stored === "dark" ? stored : (prefersDark ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="name">李明</h1>
+      <button id="theme-toggle" class="theme-toggle" aria-label="切换主题" type="button">
+        <span class="theme-icon-light">🌙</span>
+        <span class="theme-icon-dark">☀️</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="section">
+      <h2>简介</h2>
+      <p>
+        你好，我是李明，一名正在学习前端开发的学生。喜欢用代码把想法变成可以运行的东西，
+        目前对交互设计、Web 动画和 Agent Coding 很感兴趣。
+      </p>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>技能</h2>
+      <ul class="skill-list">
+        <li>HTML / CSS</li>
+        <li>JavaScript</li>
+        <li>Git / GitHub</li>
+        <li>Python 基础</li>
+        <li>Markdown 写作</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>项目</h2>
+      <div class="project-grid">
+        <article class="card">
+          <h3>个人主页</h3>
+          <p>用原生 HTML/CSS/JS 搭建的可部署到 GitHub Pages 的静态网站，支持深浅主题切换。</p>
+          <a href="https://github.com/" target="_blank" rel="noopener">查看源码 →</a>
+        </article>
+        <article class="card">
+          <h3>课程笔记</h3>
+          <p>把暑期课程的笔记整理成 Markdown 文档，通过 GitHub 仓库进行版本管理与分享。</p>
+          <a href="https://github.com/" target="_blank" rel="noopener">查看仓库 →</a>
+        </article>
+        <article class="card">
+          <h3>Todo 小工具</h3>
+          <p>一个用 JavaScript 实现的待办事项列表，练习 DOM 操作与本地存储。</p>
+          <a href="https://github.com/" target="_blank" rel="noopener">查看源码 →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>联系方式</h2>
+      <ul class="contact-list">
+        <li>邮箱：<a href="mailto:liming@example.com">liming@example.com</a></li>
+        <li>GitHub：<a href="https://github.com/" target="_blank" rel="noopener">github.com/liming</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 李明 · 暑期课程 Agent Coding Demo</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
